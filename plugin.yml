@@ -1,0 +1,5 @@
+name: FlyingPig
+main: net.loadingchunks.plugins.FlyingPig.FlyingPig
+load: STARTUP
+version: 0.1
+commands:
