@@ -1,10 +1,7 @@
 package net.loadingchunks.plugins.FlyingPig;
 
-import java.util.HashMap;
-import java.util.logging.Handler;
 import java.util.logging.Logger;
 
-import org.bukkit.entity.Slime;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class FlyingPig extends JavaPlugin {
