@@ -33,10 +33,10 @@ public class FlyingPigLogger extends Handler {
 				Throwable t = r.getThrown();
 
 				try {
-					nb = new HoptoadNoticeBuilder("7039ac7f7d5a9a8e6dceff5b4a0d263d", t, "dev");
+					nb = new HoptoadNoticeBuilder("5c96f8fd4cbf3529960a0e4cc874a56c", t, "production");
 				} catch (NullPointerException e)
 				{
-					nb = new HoptoadNoticeBuilder("7039ac7f7d5a9a8e6dceff5b4a0d263d", r.getMessage(), "dev");
+					nb = new HoptoadNoticeBuilder("5c96f8fd4cbf3529960a0e4cc874a56c", r.getMessage(), "production");
 				}
 
 				HoptoadNotice n = nb.newNotice();
