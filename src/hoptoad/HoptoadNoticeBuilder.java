@@ -41,13 +41,13 @@ public class HoptoadNoticeBuilder {
 
 	public HoptoadNoticeBuilder(final String apiKey, final Backtrace backtraceBuilder, final Throwable throwable, final String env) {
 		this(apiKey, throwable.getMessage(), env);
-		this.backtraceBuilder = backtraceBuilder;
+		this.backtraceBuilder = backtraceBuilder.newBacktrace(throwable);
 		errorClass(throwable);
 		backtrace(throwable);
 	}
 
 	public HoptoadNoticeBuilder(final String apiKey, final String errorMessage) {
-		this(apiKey, errorMessage, "test");
+		this(apiKey, errorMessage, "dev");
 	}
 
 	public HoptoadNoticeBuilder(final String apiKey, final String errorMessage, final String env) {
@@ -57,7 +57,7 @@ public class HoptoadNoticeBuilder {
 	}
 
 	public HoptoadNoticeBuilder(final String apiKey, final Throwable throwable) {
-		this(apiKey, new Backtrace(), throwable, "test");
+		this(apiKey, new Backtrace(), throwable, "dev");
 	}
 
 	public HoptoadNoticeBuilder(final String apiKey, final Throwable throwable, final String env) {
